@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeFoodsInventory.Reports.WeeklyIncoming"
+             xmlns:dg="clr-namespace:Maui.DataGrid;assembly=Maui.DataGrid"
+             xmlns:microcharts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Maui.Controls;assembly=SkiaSharp.Views.Maui.Controls"
+    Title="Weekly Incoming">
+    
+    <ScrollView>
+
+        <VerticalStackLayout Spacing="10" Padding="10">
+            <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,Auto,*,*,Auto">
+                <Label Text="Start Date:" Grid.Column="0"/>
+                <DatePicker x:Name="StartDatePicker" Grid.Column="1" DateSelected="StartDatePicker_DateSelected"/>
+                <Entry x:Name="StartDateEntry" Grid.Row="1" Grid.Column="0"/>
+
+                <Label Text="End Date:" Grid.Column="3"/>
+                <DatePicker x:Name="EndDatePicker" Grid.Column="4" DateSelected="EndDatePicker_DateSelected"/>
+                <Entry x:Name="EndDateEntry" Grid.Row="1" Grid.Column="3"/>
+
+                <Button x:Name="RetrieveUsageBtn" Text="Search"  Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Clicked="RetrieveUsageBtn_Clicked"/>
+            </Grid>
+
+            <Label Text="Weekly Information:" TextColor="White"/>
+            <dg:DataGrid x:Name="ItemsInventory" BackgroundColor="Grey" >
+                <dg:DataGrid.Columns>
+                    <dg:DataGridColumn Title="Item&#10;Name" PropertyName="ItemName" />
+                    <dg:DataGridColumn Title="Item&#10;Category" PropertyName="ItemCategory" />
+                    <dg:DataGridColumn Title="Year" PropertyName="Year" />
+                    <dg:DataGridColumn Title="WeekNumber" PropertyName="WeekNumber" />
+                    <dg:DataGridColumn Title="UnitOfMeasurement" PropertyName="UnitOfMeasurement" />
+                    <dg:DataGridColumn Title="Weekly&#10;Usage" PropertyName="Quantity" />
+
+                </dg:DataGrid.Columns>
+            </dg:DataGrid>
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

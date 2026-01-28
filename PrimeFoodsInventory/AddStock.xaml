@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeFoodsInventory.AddStock"
+             BackgroundColor="Green"
+             Title="Add Stock">
+    <ScrollView>
+        <VerticalStackLayout Padding="16">
+            <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*" ColumnDefinitions="*,*">
+
+
+                <Label Text="Product Category:" TextColor="Black" Grid.Row="0" Grid.Column="0"  HorizontalOptions="Start"/>
+                <Picker x:Name="CategoryPicker" BackgroundColor="Grey" Grid.Row="0" Grid.Column="0" Margin="1" WidthRequest="220" SelectedIndexChanged="CategoryPicker_SelectedIndexChanged"/>
+
+                <Label Text="Product Name:" TextColor="Black" Grid.Row="0" Grid.Column="1" HorizontalOptions="Start"/>
+                <Picker x:Name="ProductPicker" BackgroundColor="Grey" Grid.Row="0" Grid.Column="1" Margin="1" WidthRequest="250" SelectedIndexChanged="ProductPicker_SelectedIndexChanged"
+ />
+
+                <Label Text="Product Quantity:" TextColor="Black" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"/>
+                <Entry  x:Name="quatityEntry" BackgroundColor="White" TextColor="Black" Placeholder="Enter quantity" Keyboard="Numeric" Grid.Row="1" Grid.Column="1" Margin="5" HorizontalOptions="Start"  WidthRequest="350"/>
+                <Label x:Name="UnitOfMeasurementLbl" Text="KGS" TextColor="Black" Grid.Row="1" Grid.Column="1" Margin="5" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                <Label Text="Supplier:" TextColor="Black" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center"/>
+                <Entry  x:Name="supplierEntry" BackgroundColor="White" TextColor="Black" Placeholder="Enter supplier name" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+                <Label Text="Item Price:" TextColor="Black" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center"/>
+                <Entry x:Name="priceEntry" Placeholder="Enter item price" BackgroundColor="White" TextColor="Black" Keyboard="Numeric" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+                <Label Text="Purchase Date:" TextColor="Black" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center"/>
+                <DatePicker x:Name="datePick" TextColor="Black" Grid.Row="4" Grid.Column="1" Margin="5" IsEnabled="False"/>
+
+
+                <Label Text="Upload the Receipt" TextColor="Black" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center"/>
+                <Button x:Name="uploadBtn" Text="Choose File" Grid.Row="5" Grid.Column="1" Margin="1" Clicked="UploadBtn_Clicked"/>
+
+                <Image x:Name="ReceiptImage" Grid.Row="7" Grid.Column="0" Grid.RowSpan="2" Background="Grey" WidthRequest="300" HeightRequest="200" />
+
+
+                <Button x:Name="addStockBtn" Text="Add Stock" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="1" HorizontalOptions="Center" Margin="20" Clicked="AddStockBtn_Clicked" IsEnabled="False"/>
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

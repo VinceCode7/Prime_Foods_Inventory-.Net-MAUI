@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeFoodsInventory.AddNewItem"
+             BackgroundColor="Green"
+             Title="Add New Item">
+    <ScrollView>
+        <VerticalStackLayout Padding="30">
+            <Grid RowDefinitions="*,*,*,*,*" ColumnDefinitions="*,*"  RowSpacing="10">
+                <Label Text="Product Name:" TextColor="Black" Grid.Row="0" Grid.Column="0"  HorizontalOptions="Center"/>
+                <Entry x:Name="ItemNameEntry" BackgroundColor="White" TextColor="Black" Placeholder="Item Name:" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Product Category:" TextColor="Black" Grid.Row="1" Grid.Column="0"  HorizontalOptions="Center"/>
+                <Entry x:Name="ItemCategoryEntry" BackgroundColor="White" TextColor="Black" Placeholder="Item Category" Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Unit of Measurement:" TextColor="Black" Grid.Row="2" Grid.Column="0"  HorizontalOptions="Center"/>
+                <Entry x:Name="ItemUnitMeasurementEntry" BackgroundColor="White" TextColor="Black" Placeholder="Unit Of Measurement" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="Product Description:" TextColor="Black" Grid.Row="3" Grid.Column="0"  HorizontalOptions="Center"/>
+                <Entry x:Name="ItemDescriptionEntry" BackgroundColor="White" TextColor="Black" Placeholder="Item Description" Grid.Row="3" Grid.Column="1"/>
+
+
+                <Button x:Name="AddNewItemBtn" Text="Add Item" Grid.Row="4" Grid.Column="1" Margin="20" HorizontalOptions="Center" Clicked="AddNewItemBtn_Clicked" />
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

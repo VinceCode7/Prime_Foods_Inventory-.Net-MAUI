@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeFoodsInventory.CustomControls.ReceiptControl">
+    <Border StrokeShape="RoundRectangle" Padding="10">
+        <Grid RowDefinitions="*,*,*,*,*" ColumnDefinitions="*,*,*" ColumnSpacing="10">
+            <Image x:Name="ReceiptImage" Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" />
+            
+            <Label Text="Date:" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center"/>
+            <Label x:Name="DateLbl" Grid.Row="0" Grid.Column="2" />
+
+            <Label Text="Total Amount:" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center"/>
+            <Label x:Name="TotalLbl" Grid.Row="1" Grid.Column="2"/>
+
+            <Label Text="Supplier Name:" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center"/>
+            <Label x:Name="SupplierLbl" Grid.Row="2" Grid.Column="2"/>
+
+            <Button x:Name="ViewBtn" Text="View" Grid.Row="4" Grid.Column="2" Clicked="ViewBtn_Clicked" Margin="5"/>
+        </Grid>
+    </Border>
+</ContentView>

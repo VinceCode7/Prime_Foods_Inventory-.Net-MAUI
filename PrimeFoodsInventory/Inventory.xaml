@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeFoodsInventory.Inventory"
+             BackgroundColor="Green"
+             xmlns:dg="clr-namespace:Maui.DataGrid;assembly=Maui.DataGrid"
+             xmlns:microcharts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Maui.Controls;assembly=SkiaSharp.Views.Maui.Controls"
+             Title="Inventory">
+    
+    <ScrollView>
+
+        <VerticalStackLayout Spacing="10" Padding="10">
+            <Label Text="Products Inventory:" TextColor="Black"/>
+            <dg:DataGrid x:Name="ItemsInventory" BackgroundColor="Grey" >
+                <dg:DataGrid.Columns>
+                    <dg:DataGridColumn Title="ID" PropertyName="ItemId" />
+                    <dg:DataGridColumn Title="Item&#10;Name" PropertyName="ItemName" />
+                    <dg:DataGridColumn Title="ItemCategory" PropertyName="ItemCategory" />
+                    <dg:DataGridColumn Title="Unit Of&#10;Measurement" PropertyName="UnitOfMeasurement" />
+                    <dg:DataGridColumn Title="Quantity" PropertyName="Quantity" />
+                    <dg:DataGridColumn Title="LastPurchaseDate" PropertyName="LastPurchaseDate" />
+                    <dg:DataGridColumn Title="ItemDescription" PropertyName="ItemDescription" />
+
+                </dg:DataGrid.Columns>
+            </dg:DataGrid>
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

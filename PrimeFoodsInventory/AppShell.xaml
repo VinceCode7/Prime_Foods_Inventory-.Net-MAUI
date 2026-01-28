@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PrimeFoodsInventory.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Reports="clr-namespace:PrimeFoodsInventory.Reports"
+    xmlns:Operations="clr-namespace:PrimeFoodsInventory.Operations"
+    xmlns:local="clr-namespace:PrimeFoodsInventory"
+    Title="PrimeFoodsInventory">
+
+    <FlyoutItem Icon="home.png" Title="Home">
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Icon="stock_in.png" Title="Products In">
+        <ShellContent 
+     Title="Add Stock"
+     ContentTemplate="{DataTemplate local:AddStock}"
+     Route="AddStock" />
+    </FlyoutItem>
+    
+    <FlyoutItem Icon="stock_out.png" Title="Product Out">
+        <ShellContent
+        Title="GivingProduct"
+        ContentTemplate="{DataTemplate local:IssueItem}"
+        Route="IssueItem" />
+    </FlyoutItem>
+    
+     <FlyoutItem Icon="returns.jpg" Title="Returns">
+        <ShellContent
+        Title="Returned Products"
+        ContentTemplate="{DataTemplate local:Returns}"
+        Route="Returns" />
+    </FlyoutItem>
+
+    <FlyoutItem Icon="new_product.png" Title="Add New Product">
+        <ShellContent
+     Title="Add New Item"
+     ContentTemplate="{DataTemplate local:AddNewItem}"
+     Route="AddNewItem" />
+    </FlyoutItem>
+
+    <FlyoutItem Icon="quanties.png" Title="Inventory">
+        <ShellContent
+            Title="Available Stock Quantities"
+        ContentTemplate="{DataTemplate local:Inventory}"
+            Route="Inventory"
+            />
+    </FlyoutItem>
+
+
+        <FlyoutItem Icon="report.png" Title="Report">
+        <Tab  Title=" Usage">
+            <ShellContent
+         Title="Daily "
+         ContentTemplate="{DataTemplate Reports:DailyUsage}" />
+            
+            <ShellContent
+            Title="Weekly "
+            ContentTemplate="{DataTemplate Reports:WeeklyUsage}"/>
+            
+          <ShellContent
+            Title="Monthly "
+            ContentTemplate="{DataTemplate Reports:MonthlyUsage}"/>  
+        </Tab>
+
+        <Tab  Title="Added Products">
+            <ShellContent
+            Title="Daily"
+            ContentTemplate="{DataTemplate Reports:DailyIncoming}"/>
+
+            <ShellContent
+            Title="Weekly"
+            ContentTemplate="{DataTemplate Reports:WeeklyIncoming}"/>
+
+            <ShellContent
+            Title="Monthly"
+            ContentTemplate="{DataTemplate Reports:MonthlyIncoming}"/>
+        </Tab>
+
+
+        <Tab  Title="Products Given Out">
+            <ShellContent
+            Title="Daily"
+            ContentTemplate="{DataTemplate Reports:DailyTakenStock}"/>
+
+            <ShellContent
+            Title="Weekly"
+            ContentTemplate="{DataTemplate Reports:WeeklyTakenStock}"/>
+
+            <ShellContent
+            Title="Monthly"
+            ContentTemplate="{DataTemplate Reports:MonthlyTakenStock}"/>
+        </Tab>
+
+        <Tab  Title="Returns">
+            <ShellContent
+            Title="Daily"
+            ContentTemplate="{DataTemplate Reports:DailyReturns}"/>
+
+            <ShellContent
+            Title="Weekly"
+            ContentTemplate="{DataTemplate Reports:WeeklyReturns}"/>
+
+            <ShellContent
+            Title="Monthly"
+            ContentTemplate="{DataTemplate Reports:MonthlyReturns}"/>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Icon="operations.png" Title="Operations">
+        <Tab Title="Incoming Operations">
+            <ShellContent
+        Title="Added Stock"
+        ContentTemplate="{DataTemplate Operations:IncomingOperations}"
+        Route="GivingProduct" />
+        </Tab>
+
+        <Tab Title="OutGoing Operations">
+            <ShellContent
+        Title="Products Given Out"
+        ContentTemplate="{DataTemplate Operations:OutgoingOperations}"
+        Route="OutGoingOperations" />
+        </Tab>
+
+        <Tab Title="Returns Operations">
+            <ShellContent
+        Title="Products Returned"
+        ContentTemplate="{DataTemplate Operations:ReturnsOperations}"
+        Route="ReturnsOperations" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Icon="receipt.png" Title="Receipts">
+        <ShellContent
+            Title="Receipts"
+        ContentTemplate="{DataTemplate local:ReceiptPage}"
+            Route="Inventory"
+            />
+    </FlyoutItem>
+
+</Shell>

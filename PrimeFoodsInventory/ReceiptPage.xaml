@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeFoodsInventory.ReceiptPage"
+             xmlns:CustomControls="clr-namespace:PrimeFoodsInventory.CustomControls"
+             Title="Receipt">
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
+        <VerticalStackLayout Padding="10">
+        <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,Auto,*,*,Auto">
+            <Label Text="Start Date:" Grid.Column="0"/>
+            <DatePicker x:Name="StartDatePicker" Grid.Column="1" DateSelected="StartDatePicker_DateSelected"/>
+            <Entry x:Name="StartDateEntry" Grid.Row="1" Grid.Column="0"/>
+
+            <Label Text="End Date:" Grid.Column="3"/>
+            <DatePicker x:Name="EndDatePicker" Grid.Column="4" DateSelected="EndDatePicker_DateSelected"/>
+            <Entry x:Name="EndDateEntry" Grid.Row="1" Grid.Column="3"/>
+
+            <Button x:Name="RetrieveUsageBtn" Text="Search"  Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" Clicked="RetrieveUsageBtn_Clicked"/>
+        </Grid>
+
+            <BoxView BackgroundColor="Grey" HeightRequest="10"/>
+        </VerticalStackLayout>
+
+            <VerticalStackLayout x:Name="ReceiptLayout" Spacing="10">
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
