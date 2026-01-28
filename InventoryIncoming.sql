@@ -1,0 +1,18 @@
+--create table InventoryIncoming(
+--ItemName varchar(20)  not null,
+--ItemCategory varchar(20) not null,
+--Quantity decimal not null,
+--UnitOfMeasurement varchar(20),
+--SupplierName varchar(20) not null,
+--ItemPrice decimal not null,
+--DateRecorded date not null default GETDATE(),
+--ReceiptData VARBINARY(MAX),
+--);
+--select * from InventoryIncoming;
+--select ItemCategory from InventoryIncoming group by ItemCategory;
+--drop table InventoryIncoming;
+--alter table InventoryIncoming alter Column DateRecorded date not null default GETDATE();
+--DECLARE @StartDate DATE = '2025-12-01';
+--DECLARE @EndDate DATE   = '2025-12-31';
+--select DateRecorded,ReceiptData,sum(ItemPrice) as TotalCost,SupplierName  from InventoryIncoming where DateRecorded Between @StartDate and @EndDate group by DateRecorded,ReceiptData,SupplierName;
+  

@@ -1,0 +1,14 @@
+--create table ItemStock(
+--ItemId int primary key not null Identity(1,1),
+--ItemName varchar(20) unique not null,
+--ItemCategory varchar(20) not null,
+--UnitOfMeasurement varchar(20),
+--Quantity Decimal not null default 0,
+--LastPurchaseDate DATE not null default GetDate(),
+--ItemDescription varchar(50) not null,
+--);
+--drop ItemStock;
+SELECT * FROM ItemStock;
+--Select ItemCategory from ItemStock GROUP BY ItemCategory
+--alter table ItemStock alter Column Quantity decimal(10,2);
+--alter table ItemStock drop Column LastPurchaseQuantity;
